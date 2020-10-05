@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <fstream>
 
@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	int count[9] = { 0,1,2,3,4,5,6,7,8};
+	int count[11] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 	string file_name;
 	const int n = 5;
 	int col;
@@ -61,6 +61,30 @@ int main()
 					s = "";
 				}
 				break;
+			case 4:
+				if (file_name[j] == "l") {
+					i = 8;
+					s += file_name[j];
+				}
+				else if (file_name[j] == "s") {
+					i = 9;
+					s += file_name[j];
+				}
+				else {
+					i = 1;
+					s = "";
+				}
+				break;
+			case 5:
+				if (file_name[j] == "s") {
+					i = 11;
+					s += file_name[j];
+				}
+				else {
+					i = 1; 
+					s = "";
+				}
+				break;
 			case 6:
 				if (file_name[j] == 'm') {
 					i = 7;
@@ -73,13 +97,43 @@ int main()
 				break;
 			case 7:
 				if (file_name[j] == 'l') {
-					i = 8;
+					i = 11;
 					s += file_name[j];
 				}
 				else {
-					i = 8;
+					i = 11;
 				}
+				break;
 			case 8:
+				if (file_name[j] == "a") {
+					i = 10;
+					s += file_name[j];
+				}
+				else {
+					s = "";
+					i = 1;
+				}
+				break;
+			case 9:
+				if (file_name[j] == "s") {
+					i = 11;
+				}
+				else {
+					s = "";
+					i = 1;
+				}
+				break;
+			case 10:
+				if (file_name[j] == "s") {
+					i = 9;
+					s += file_name[j];
+				}
+				else {
+					s = "";
+					i = 1;
+				}
+				break;
+			case 11:
 				cout << s << endl;
 				num++;
 				s = "";
